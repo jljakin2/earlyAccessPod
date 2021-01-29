@@ -1,0 +1,19 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 50%; /* this will make each rem a multiple of 8 which is preferred from a design stand point */
+}
+
+body {
+  background-color: $blue-black;
+  font-family: "Chivo", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  box-sizing: border-box; /* better practice than putting this in the * selector because now it can be inherited throughout document */
+}

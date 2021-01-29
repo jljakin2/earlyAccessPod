@@ -1,0 +1,228 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 50%;
+  /* this will make each rem a multiple of 8 which is preferred from a design stand point */ }
+
+body {
+  background-color: #121725;
+  font-family: "Chivo", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  box-sizing: border-box;
+  /* better practice than putting this in the * selector because now it can be inherited throughout document */ }
+
+.large-paragraph {
+  font-size: 3.5rem;
+  line-height: 5rem;
+  font-weight: 300;
+  color: #ffffff; }
+
+.btn {
+  background-color: #54e6af;
+  color: #121725;
+  position: relative;
+  right: 21rem;
+  border: none;
+  border-radius: 3.5rem;
+  padding: 1rem 3rem;
+  font-size: 1.75rem;
+  box-shadow: 0 25px 20px -20px rgba(84, 230, 175, 0.2);
+  cursor: pointer;
+  font-weight: 700;
+  height: 5.75rem;
+  width: 20.25rem;
+  /* "only screen" makes sure the media queries don't apply to websites printed out */ }
+  .btn:hover {
+    background-color: #b3ffe2; }
+  @media only screen and (max-width: 46.875em) {
+    .btn {
+      width: 100%;
+      display: block;
+      margin: 3rem 0 0 0;
+      right: 0;
+      height: 7rem; } }
+
+.page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  /* "only screen" makes sure the media queries don't apply to websites printed out */ }
+  @media only screen and (max-width: 84.375em) {
+    .page {
+      margin: 0;
+      background-image: url("../assets/tablet/image-host.jpg");
+      background-repeat: no-repeat;
+      background-position: top right; } }
+  @media only screen and (max-width: 46.875em) {
+    .page {
+      background-image: url("../assets/mobile/image-host.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; } }
+
+.container {
+  margin: 0 0 0 25rem;
+  position: relative;
+  height: 78%;
+  width: 100%;
+  background-image: url("../assets/desktop/image-host.jpg");
+  background-repeat: no-repeat;
+  background-position: center right;
+  /* "only screen" makes sure the media queries don't apply to websites printed out */ }
+  @media only screen and (max-width: 84.375em) {
+    .container {
+      height: 100vh;
+      padding-left: 5rem;
+      margin: 0;
+      background-image: none; } }
+  @media only screen and (max-width: 46.875em) {
+    .container {
+      background: rgba(18, 23, 37, 0.9);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0; } }
+
+.dots {
+  position: absolute;
+  bottom: -4rem;
+  right: 0;
+  /* "only screen" makes sure the media queries don't apply to websites printed out */ }
+  @media only screen and (max-width: 84.375em) {
+    .dots {
+      left: 4rem;
+      bottom: 0; } }
+  @media only screen and (max-width: 46.875em) {
+    .dots {
+      display: none; } }
+
+.mb-1 {
+  margin-bottom: 1rem; }
+
+.mb-2 {
+  margin-bottom: 2rem; }
+
+.mb-3 {
+  margin-bottom: 3rem; }
+
+.mb-4 {
+  margin-bottom: 4rem; }
+
+.card {
+  background: #121725;
+  width: 90rem;
+  padding: 10rem 8rem 0 0;
+  /* "only screen" makes sure the media queries don't apply to websites printed out */ }
+  @media only screen and (max-width: 84.375em) {
+    .card {
+      padding: 4rem 2rem 4rem 0; } }
+  @media only screen and (max-width: 46.875em) {
+    .card {
+      background: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      width: 90%; } }
+  .card__title {
+    font-size: 6.5rem;
+    line-height: 7.75rem;
+    font-weight: 300;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    /* "only screen" makes sure the media queries don't apply to websites printed out */ }
+    .card__title--accent {
+      color: #54e6af; }
+    @media only screen and (max-width: 84.375em) {
+      .card__title {
+        font-size: 5.5rem; } }
+    @media only screen and (max-width: 46.875em) {
+      .card__title {
+        font-size: 4.5rem;
+        line-height: 6rem;
+        margin-bottom: 7rem;
+        order: 1; } }
+  .card__paragraph {
+    width: 55.5rem;
+    font-weight: 300;
+    color: #c2cbe5;
+    font-size: 2.25rem;
+    line-height: 3.5rem;
+    margin-bottom: 5rem;
+    /* "only screen" makes sure the media queries don't apply to websites printed out */ }
+    @media only screen and (max-width: 46.875em) {
+      .card__paragraph {
+        font-size: 2.5rem;
+        line-height: 4.5rem;
+        margin-bottom: 7rem;
+        order: 2; } }
+
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  /* "only screen" makes sure the media queries don't apply to websites printed out */ }
+  @media only screen and (max-width: 46.875em) {
+    .logo-container {
+      order: 3; } }
+  .logo-container .card__logo {
+    color: #5a668a; }
+
+.form {
+  margin-bottom: 5rem;
+  /* "only screen" makes sure the media queries don't apply to websites printed out */ }
+  @media only screen and (max-width: 46.875em) {
+    .form {
+      order: 4;
+      margin-top: 7rem; } }
+  .form__control {
+    position: relative;
+    /* "only screen" makes sure the media queries don't apply to websites printed out */ }
+    .form__control small {
+      color: #fb3e3e;
+      margin: 0.5rem 0 0 3rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      display: block;
+      visibility: hidden;
+      /* "only screen" makes sure the media queries don't apply to websites printed out */ }
+      @media only screen and (max-width: 46.875em) {
+        .form__control small {
+          margin: 2rem 0 0 0; } }
+    .form__control--email {
+      background: #2c344b;
+      border-radius: 3.5rem;
+      height: 7rem;
+      padding-left: 3rem;
+      border: none;
+      width: 53rem;
+      font-family: inherit;
+      color: #ffffff;
+      font-weight: 700; }
+      .form__control--email:focus {
+        outline: none; }
+      .form__control--email::-webkit-input-placeholder {
+        color: #c2cbe5;
+        font-weight: 700; }
+    @media only screen and (max-width: 46.875em) {
+      .form__control {
+        padding: 0; } }
+
+.logo--header {
+  margin: 0rem 0 14rem 0;
+  /* "only screen" makes sure the media queries don't apply to websites printed out */ }
+  @media only screen and (max-width: 84.375em) {
+    .logo--header {
+      margin: 4rem 0 25rem 0; } }
+  @media only screen and (max-width: 46.875em) {
+    .logo--header {
+      margin: 10rem 2rem 8rem 0; } }
